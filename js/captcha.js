@@ -35,7 +35,7 @@ function crearCaptcha(){
 verificar.addEventListener('click' , () =>{
     let valor = input.value;
     if (valor == ''){
-        alert('Porfavor Ingrese el codigo');
+        document.querySelector("#captcha-body").innerHTML = "Porfavor Ingrese el codigo";
     }
     else if(valor == codigo.textContent){
         alert('Codigo validado');
