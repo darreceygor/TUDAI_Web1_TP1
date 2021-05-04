@@ -66,6 +66,17 @@ footer {
     height: 20%;
     background-image: url(../img/pc.jpg);
     background-position: 1300px 200px;
+    display: flex;
+    justify-content:space-evenly;
+}
+
+#firma {
+    margin-top: 150px;
+    width: auto;
+    height: 25px;
+    padding: 10px;
+    background-color: rgb(26.3, 73.7, 78);
+    border-radius: 15px;
 }
 
 /*FIN CONTENEDOR, GPO, FOOTER*/
