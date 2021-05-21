@@ -2,155 +2,193 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" contenido="IE=edge">
+    <meta name="viewport" contenido="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/estilos.css">
-    <title>Componentes de PC</title>
+    
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>  
+    <!-- CODE JQUERY-->
+    
+    <title>Venta de Articulos de PC</title>
 </head>
 <body>
 
-<header>
-    <div class="menu-horizontal">
-        <a href="index.html">Inicio</a>
-        <a href="armado.html">Armado de PC</a>
-        <a href="contacto.html">Contacto</a>
+    <div class="container">
+        
+        <header>
+            
+        </header>
+
+            <nav id="menu-principal">
+
+                <div class="nav-menu">
+                
+                    <label id="icon">
+                        <i class="fa fa-houzz"></i>
+                    </label>
+
+                    <ul>
+                        <li><a href="#">Inicio</a></li>
+                        <li><a href="#">Acerca de</a></li>
+                        <li><a href="#">Servicios</a></li>
+                        <li><a href="#">Contacto</a></li>
+                        <li><a href="#">Historia</a></li>
+                    </ul>
+                </div>
+                    
+
+               <!-- 
+                    <a href="index.html">Inicio</a>
+                <a href="armado.html">Armado de PC</a>
+                <a href="contacto.html">Contacto</a>
+               -->
+            </nav>
+
+            <section id="sidebar">
+                <ul>
+                    <div  id="nav-lateral" class="nav-lateral"> 
+                        <h1 id="titulocategoria">Categorias</h1><br>
+                        <li id="categoria1"><h4><a href="#monitores" >Monitores</a></h4></li>
+                        <li id="categoria2"><h4><a href="#parlantes" >Parlantes</a></h4></li>
+                        <li id="categoria3"><h4><a href="#memorias" >Memorias</a></h4></li>
+                        <li id="categoria4"><h4><a href="#gabinetes" >Gabinetes</a></h4></li>
+                        <li id="categoria5"><h4><a href="#teclados" >Teclados</a></h4></li>
+                        <li id="categoria6"><h4><a href="#varios" >Varios</a></h4></li>
+                    </div>    
+                </ul>   
+            </section>
+            
+                <article id="contenido1">
+                    <div class ="item">
+                        <img src="img/item1.jpg" alt="imagen 1" id="img-item">
+                        <p>
+                            <h4>Mouse Gamer</h4> <br>
+                            Marca: RAZER Modelo BASILISK <br>
+                            ULTIMATE NEGRO<hr>
+                            Especificaciones: <br>
+                            20000 DPI <br>
+                            Smart Tracking <br>
+                            Motion Sync <hr>
+                        </p>
+                    </div>
+                </article>
+
+                <article id="contenido2">
+                    <div class ="item">
+                        <img src="img/item2.jpg" alt="imagen 2" id="img-item">
+                        <p>
+                            <h4>Mouse Gamer</h4> <br>
+                            Marca: LOGITECH Modelo:G203 Lightsync <br>
+                            Negro <hr>
+                            Especificaciones: <br>
+                            8000 DPI<br>
+                            RGB <br>
+                            Motion Sync <hr>
+                        </p>
+                    </div>
+                </article>
+
+                <article id="contenido3">
+                        <div class ="item">
+                            <img src="img/item3.jpg" alt="imagen 3" id="img-item">
+                            <p>
+                                <h4>Combo</h4> <br>
+                                Marca: TEMPEST Modelo: APOCALYPSE <br>
+                                <hr>
+                                Especificaciones: <br>
+                                Teclado Mecanico RGB <br>
+                                Mouse 4000 DPI RGB <br>
+                                Auriculares <hr>
+                            </p>
+                        </div>
+                </article>
+
+                <article id="contenido4">
+                        <div class ="item">
+                            <img src="img/item6.jpg" alt="imagen 4" id="img-item">
+                            <p>
+                                <h4>Teclado Mecanico</h4> <br>
+                                Marca:SUIKO Modelo: IVORY <br>
+                                GAMING FULL RGB <hr>
+                                Especificaciones: <br>
+                                Switch Kailh Red <br>
+                                Tecnología anti-ghosting <br>
+                                Teclas programables <hr>
+                            </p>
+                        </div>
+                </article>
+
+                <article id="contenido5">
+                    <div class ="item">
+                        <img src="img/item4.jpg" alt="imagen 1" id="img-item">
+                        <p>
+                            <h4>Notebook 14"</h4><br>
+                            Marca: EXO Modelo: Smart C19 <br>
+                            Windows 10 Home Edition <hr>
+                            Especificaciones: <br>
+                            Intel Celeron N3350 <br>
+                            RAM 4GB <br>
+                            SSD 128 GB <hr>
+                        </p>
+                    </div>
+                </article>
+
+                <article id="contenido6">
+                    <div class ="item">
+                        <img src="img/item5.png" alt="imagen 2" id="img-item">
+                        <p>
+                            <h4>Notebook 17"</h4> <br>
+                            Marca: MSI Modelo: GF75 THIN <br>
+                            Windows 10 Pro <hr>
+                            Especificaciones: <br>
+                            RAM 16 GB <br>
+                            SSD 512 GB <br>
+                            Placa NVIDIA GTX 1660 Ti 6 GB <hr>
+                        </p>
+                    </div>
+                </article>
+
+                <article id="contenido7">
+                    <div class ="item">
+                        <img src="img/item7.png" alt="imagen 3" id="img-item">
+                        <p>
+                            <h4>Tablet 8" </h4><br>
+                            Marca: SAMSUNG Modelo: Galazy TAB A <br>
+                            Negra <hr>
+                            Especificaciones: <br>
+                            RAM 2 GB <br>
+                            Capacidad:32 GB <br>
+                            Dual Camara Wifi <hr>
+                        </p>
+                    </div>
+                </article>
+
+                <article id="contenido8">
+                    <div class ="item">
+                        <img src="img/item8.jpg" alt="imagen 4" id="img-item">
+                        <p>
+                            <h4>Tablet 10" </h4><br>
+                            Marca : KANJI Modelo: LANDER <br>
+                            + Auricular Blanco + Funda <hr>
+                            Especificaciones: <br>
+                            RAM 2gb <br>
+                            Capacidad: 32GB
+                            Quad Core <hr>
+                        </p>
+                    </div>
+                </article>
+
+
+            <footer>
+                <div id="firma">
+                    <span> TUDAI @ 2021 - Emanuel Beorlegui - Diego Arreceygor</span> 
+                </div> 
+            </footer>
+
+        <script src="js/main.js"></script>
     </div>
-</header>
-
-
-<!-- COMIENZA CONTENEDOR GENERAL (MENU CATEGORIAS E ITEMS)-->
-<div class="contenedor">
-
-    <!-- SECCION IZQUIERDA: MENU LATERAL CON INFORMACION DE CATEGORIAS-->
-    <section class="menu-lateral">
-        <ul>
-            <nav id="nav-lateral"> <header><h1>Categorias</h1></header><br>
-                <li><h4><a href="#monitores" >Monitores</a></h4></li><br>
-                <li><h4><a href="#memorias" >Memorias</a></h4></li><br>
-                <li><h4><a href="#gabinetes" >Gabinetes</a></h4></li><br>
-                <li><h4><a href="#teclados" >Teclados</a></h4></li><br>
-                <li><h4><a href="#varios" >Varios</a></h4></li>
-            </nav>    
-        </ul>
-       
-    </section>
-
-    <!-- PRIMER LINEA DE ITEMS -->
-    <section class="gpo-items">
-        <section>
-            <div class ="item">
-                <img src="img/item1.jpg" alt="imagen 1" id="img-item">
-                <p>
-                    <h4>Mouse Gamer</h4> <br>
-                    Marca: RAZER Modelo BASILISK <br>
-                    ULTIMATE NEGRO<hr>
-                    Especificaciones: <br>
-                    20000 DPI <br>
-                    Smart Tracking <br>
-                    Motion Sync <hr>
-                </p>
-            </div>
-
-            <div class ="item">
-                <img src="img/item2.jpg" alt="imagen 2" id="img-item">
-                <p>
-                    <h4>Mouse Gamer</h4> <br>
-                    Marca: LOGITECH Modelo:G203 Lightsync <br>
-                    Negro <hr>
-                    Especificaciones: <br>
-                    8000 DPI<br>
-                    RGB <br>
-                    Motion Sync <hr>
-                </p>
-            </div>
-
-            <div class ="item">
-                <img src="img/item3.jpg" alt="imagen 3" id="img-item">
-                <p>
-                    <h4>Combo</h4> <br>
-                    Marca: TEMPEST Modelo: APOCALYPSE <br>
-                    <hr>
-                    Especificaciones: <br>
-                    Teclado Mecanico RGB <br>
-                    Mouse 4000 DPI RGB <br>
-                    Auriculares <hr>
-                </p>
-            </div>
-            <div class ="item">
-                <img src="img/item6.jpg" alt="imagen 4" id="img-item">
-                <p>
-                    <h4>Teclado Mecanico</h4> <br>
-                    Marca:SUIKO Modelo: IVORY <br>
-                    GAMING FULL RGB <hr>
-                    Especificaciones: <br>
-                    Switch Kailh Red <br>
-                    Tecnología anti-ghosting <br>
-                    Teclas programables <hr>
-                </p>
-            </div>
-        </section>
-
-        <!-- SEGUNDA LINEA DE ITEMS -->
-        <section>
-            <div class ="item">
-                <img src="img/item4.jpg" alt="imagen 1" id="img-item">
-                <p>
-                    <h4>Notebook 14"</h4><br>
-                    Marca: EXO Modelo: Smart C19 <br>
-                    Windows 10 Home Edition <hr>
-                    Especificaciones: <br>
-                    Intel Celeron N3350 <br>
-                    RAM 4GB <br>
-                    SSD 128 GB <hr>
-                </p>
-            </div>
-
-            <div class ="item">
-                <img src="img/item5.png" alt="imagen 2" id="img-item">
-                <p>
-                    <h4>Notebook 17"</h4> <br>
-                    Marca: MSI Modelo: GF75 THIN <br>
-                    Windows 10 Pro <hr>
-                    Especificaciones: <br>
-                    RAM 16 GB <br>
-                    SSD 512 GB <br>
-                    Placa NVIDIA GTX 1660 Ti 6 GB <hr>
-                </p>
-            </div>
-
-            <div class ="item">
-                <img src="img/item7.png" alt="imagen 3" id="img-item">
-                <p>
-                    <h4>Tablet 8" </h4><br>
-                    Marca: SAMSUNG Modelo: Galazy TAB A <br>
-                    Negra <hr>
-                    Especificaciones: <br>
-                    RAM 2 GB <br>
-                    Capacidad:32 GB <br>
-                    Dual Camara Wifi <hr>
-                </p>
-            </div>
-            <div class ="item">
-                <img src="img/item8.jpg" alt="imagen 4" id="img-item">
-                <p>
-                    <h4>Tablet 10" </h4><br>
-                    Marca : KANJI Modelo: LANDER <br>
-                    + Auricular Blanco + Funda <hr>
-                    Especificaciones: <br>
-                    RAM 2gb <br>
-                    Capacidad: 32GB
-                    Quad Core <hr>
-                </p>
-            </div>
-        </section>
-    </section>
-
-</div>
-
-<footer>
-    <span id="firma"> TUDAI @ 2021 </span>   
-    <span id="firma"> Emanuel Beorlegui - Diego Arreceygor</span>  
-</footer>
-
 </body>
 </html>
