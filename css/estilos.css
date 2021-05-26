@@ -1,3 +1,22 @@
+/*VARIABLE PARA COLOR DE FONDO 20                                   */
+/*CONTAINER 38          CONTAINER ARMADO 62                         */
+/*MENU PRINCIPAL 116    MENU LATERAL 178                            */
+/*FOOTER 198            ITEM 216                TABLA232            */
+/*                                                                  */
+/*BREAKPOINT CELULAR 268                        BREAKPOINT PC   335 */
+/*AREAS CONTENIDO 392   AREAS ARMADO 461                            */
+/*                                                                  */
+/*                                                                  */
+
+
+
+
+
+
+
+
+
+
 :root {
     --contenido-color: rgb(18.8, 52.2, 55.3);
     /*variable de uso comun en contenido*/
@@ -6,6 +25,9 @@
 * {
     margin: 0;
     padding: 0;
+    text-decoration: none;
+    list-style: none;
+    color: white;
 }
 
 body {
@@ -14,14 +36,12 @@ body {
 
 .container {
     display: grid;
-    height: 100vh;
-    color: white;
     grid-template-columns: 1fr;
-    grid-template-rows: 2.2fr                    /*head*/
-                        0.4fr                    /*nav*/
-                        2.2fr                    /*sidebar*/
-                        repeat(8, 1.2fr)         /*contenido*/
-                        1fr                      /*foot*/
+    grid-template-rows: 0.8fr                    /*head*/
+                        0.5fr                    /*nav*/
+                        0.5fr                    /*sidebar*/
+                        repeat(8, 1fr)         /*contenido*/
+                        1.2fr                      /*foot*/
     ;
     grid-template-areas:
         "header"            /*2.2*/
@@ -39,48 +59,123 @@ body {
 
 }
 
-.nav-lateral {
+.container_armado {
     display: grid;
-    height: 100%;
-    grid-template-columns: repeat(4, 1fr);
-    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-columns: 1fr;
+    grid-template-rows: 2fr                    /*head*/
+                        0.4fr                    /*nav*/
+                        3.3fr
+                        3.3fr                   /*contenido*/
+                        1fr                      /*foot*/
+    ;
     grid-template-areas:
-        "titulocategoria titulocategoria titulocategoria"
-        "categoria1 categoria2 categoria3"
-        "categoria4 categoria5 categoria6";
+        "header"            /*2.2*/
+        "nav"               /*0.4*/
+        "armarpc"          /*3.2*/ 
+        "pcarmada"         /*3.2*/
+        "footer";           /*1*/
+    
 }
 
-.nav-menu li {
-    margin: .2rem;
-    display: inline-block;
+
+
+.logo,
+.menu,
+.cancel {
+    width: 50px;
+    height: 50px;
+    margin-top: 20px;
+    margin-left: 10%;
+} 
+
+.menu, 
+.cancel {
+    color:white;
+    font-size: 30px;
     float: right;
+    line-height: 80px;
+    margin-right: 40px;
+    cursor:pointer; /*cambia a manito*/
 }
 
-.nav-menu li a {
-    text-decoration: none;
+.cancel {
+    display: none;
 }
 
- 
 
 header {
-    height: 20vh;
+
     background-image: url(../img/pc.jpg);
     grid-area: header;
 }
 
-
-nav {
-    background: lightblue;
-    grid-area: nav;
+option{
+    color:black;
 }
+
+/*MENU PRINCIPAL*/
+nav {
+    background: lightblue; 
+    grid-area: nav;
+    padding: 15px;
+}
+
+nav ul {
+    float: right;
+    margin-right:25px ;
+    display: none;
+}
+
+/*todos los items de la lista en linea*/
+nav ul li {
+    display: inline-block;
+    line-height: 80px; /*especifica la altura mínima de los cuadros de línea dentro del elemento.*/
+    margin: 0 15px;
+}
+
+/* tamaño de letras y mayusc*/
+nav ul li a {
+    position: relative;
+    font-size: 18px;
+    padding: 5px 0;
+    text-transform: uppercase; /*todo a mayusculas*/
+}
+
+#check {
+    display:none
+}
+
+#check:checked ~ ul {
+    left: 0;
+}
+
+/*items de menu en bloque */
+nav>ul {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: #34495e;
+    top: 45%;
+    left: -110%; /*oculta el bloque del menu*/
+    text-align: center;
+    transition: all .5s;
+    display: block;
+}
+
+nav ul li {
+    display: block;
+    margin: 50px 0;
+    line-height: 30px ;
+}
+
 
 #sidebar {
     background-color: rgb(30, 87, 92);
     grid-area: sidebar;
 }
+/*FIN MENU PRINCIPAL*/
 
 /*MENU LATERAL*/
-
 ul {
     list-style-type: none;
     padding: 1em;
@@ -99,12 +194,10 @@ ul {
 /*FIN MENU LATERAL*/
 
 
-
-
 /*FOOTER*/
 
 footer {
-    height: 10vh;
+  
     background-image: url(../img/pc.jpg);
     grid-area: footer;
 }
@@ -116,7 +209,6 @@ footer {
     color: white;
     background-color: rgb(63, 133, 139);
     border-radius: 15px;
-    justify-contenido: space-between;
     margin-top: 10px;
 }
 
@@ -136,50 +228,49 @@ footer {
 
 }
 
-/*.nav-menu #icon {
-    display: block;
+
+/*FORMATEA TABLA*/
+th {
+    background-color:  lightblue;
+    color: black;
 }
 
-.nav-menu ul {
-    position: fixed;
-      width: 100%;
-    height: 100vh;*
-    background: #2f3640;
-    top: 25%;
-    left: -120%;
+tr:nth-child(even) { /*todos los elementos pares de la tabla tendran backgroun diferente*/
+    background-color: #3a4e4e;
+}
+
+table, th, td {
+    border: 1px solid black;
     text-align: center;
-    transition: all .5s;
-
+    vertical-align:middle;
 }
 
-.nav-menu li {
-    display: block;
-    margin: 50px 0;
-    line-height: 30px;
+th #alinea {
+    text-align: left;
 }
 
-.nav-menu a {
+th, tr {
+    font-style: italic;
+    font-size: 15px;
+    padding: 7px;
+}
+
+caption {
     font-size: 20px;
+    padding: 15px;
+
 }
 
-a:hover {
-    border: none;
-    color: #3498db;
-}
+/*FIN FORMATEA TABLA*/
 
-.nav-menu ul.show {
-    left: 0;
-}*/
 
 /*BREAKPOINT CELULAR*/
 
-
-@media screen and (min-width: 720px) {
-
+@media only screen and (min-width: 720px) {
     .container {
         grid-template-columns: 0.6fr repeat(2, 1fr);
         /*3 columnas*/
-        grid-template-rows: 2fr 0.2fr repeat(4, 1.2fr) 0.8fr;
+        grid-template-rows: 1fr 0.2fr repeat(4, 1.2fr) 0.8fr;
         /*7 filas*/
         grid-template-areas:
             "header header header"
@@ -190,6 +281,35 @@ a:hover {
             "sidebar contenido7 contenido8"
             "footer footer footer";
         grid-gap: 0.2rem;
+    }
+
+    .nav-lateral {
+        display: grid;
+        height: 100%;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 1fr 1fr 1fr;
+        grid-template-areas:
+            "titulocategoria titulocategoria titulocategoria"
+            "categoria1 categoria2 categoria3"
+            "categoria4 categoria5 categoria6";
+    }
+
+    .container_armado {
+        display: grid;
+        height: 100vh;
+        grid-template-columns: 0.8fr 1.2fr;
+        grid-template-rows: 0.5fr                    /*head*/
+                            0.4fr                    /*nav*/
+                            4.6fr                    /*contenido*/
+                            2fr                      /*foot*/
+        ;
+        grid-template-areas:
+            "header header"             /*2.2*/
+            "nav nav"                   /*0.4*/
+            "armarpc pcarmada"        /*4.4*/ 
+            "footer footer";            /*1*/
+        grid-gap: 0.2rem;
+    
     }
 
     .nav-lateral {
@@ -207,28 +327,16 @@ a:hover {
             "categoria6";
     }
 
-    /*label.logo {
-        font-size: 32px;
-        padding-left: 60px;
-    }
-
-    .nav-menu ul {
-        margin-right: 20px;
-    }
-
-    .nav-menu a {
-        font-size: 17px;
-    }*/
+    
 }
 
-/*BREAKPOINT pc*/
+/*BREAKPOINT PC*/
 
-
-@media screen and (min-width: 768px) {
+@media only screen and (min-width: 1024px) {
     .container {
         grid-template-columns: 0.6fr repeat(4, 1fr);
         /*5 4columnas*/
-        grid-template-rows: 2fr 0.2fr 1.2fr 1.2fr 0.8fr;
+        grid-template-rows: 1fr 0.2fr 1.2fr 1.2fr 0.8fr;
         /*5 filas*/
         grid-template-areas:
             "header header header header header"
@@ -254,57 +362,32 @@ a:hover {
             "categoria6";
     }
 
-    /*.nav-menu {
-        height: 80px;
-        width: 100%;
-        background-image: #34495e;
-    }
-
-    label.logo {
-        font-size: 35px;
-        font-weight: bold;
-        color: white;
-        padding: 0 100px;
-        line-height: 80px;
-    }
-
-    .nav-menu ul {
-        float: right;
-        margin-right: 40px;
-    }
-
-    .nav-menu li {
-        display: inline-block;
-        margin: 0 8px;
-        line-height: 80px;
-    }
-
-    .nav-menu a {
-        color: white;
-        font-size: 18px;
-        text-transform: uppercase;
-        border: 1px solid transparent;
-        padding: 7px 10px;
-        border-radius: 3px;
-    }
-
-    a:hover {
-        border: 1px solid white;
-        transition: .5s;
-    }
-
-    .nav-menu #icon {
-        color: white;
-        font-size: 30px;
-        line-height: 80px;
-        float: right;
-        margin-right: 40px;
-        cursor: pointer;
+    .menu,
+    .cancel {
         display: none;
-    }*/
+    }
 
 
+    nav ul {
+        float: right;
+        margin-right:25px ;
+    }
+    nav ul li {
+        display: inline-block;
+        line-height: 80px; /*especifica la altura mínima de los cuadros de línea dentro del elemento.*/
+        margin: 0 15px;
+    }
+    /* tamaño de letras y mayusc*/
+    nav ul li a {
+        position: relative;
+        font-size: 18px;
+        padding: 5px 0;
+        text-transform: uppercase; /*todo a mayusculas*/
+    }
 }
+
+
+
 
 /*CONTENIDO GRUPO DE ARTICULOS*/
 #contenido1 {
@@ -371,3 +454,21 @@ a:hover {
 #categoria6 {
     grid-area: categoria6;
 }
+
+/*FIN CONTENIDO GRUPO DE ARTICULOS*/
+
+
+/*CONTENIDO ARMAR PC 6 PC HISTORICO*/
+
+#armarpc {
+    background-color: var(--contenido-color);
+    grid-area: armarpc;
+}
+
+#pcarmada {
+    background-color: var(--contenido-color);
+    grid-area: pcarmada;
+}
+
+/*FIN CONTENIDO ARMAR PC 6 PC HISTORICO*/
+
