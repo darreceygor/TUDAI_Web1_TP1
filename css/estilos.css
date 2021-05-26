@@ -224,7 +224,7 @@ a:hover {
 /*BREAKPOINT pc*/
 
 
-@media only screen and (min-width: 768px) {
+@media screen and (min-width: 768px) {
     .container {
         grid-template-columns: 0.6fr repeat(4, 1fr);
         /*5 4columnas*/
