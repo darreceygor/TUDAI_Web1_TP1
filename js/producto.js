@@ -1,4 +1,3 @@
-
 let contenido = document.querySelector('#contenido') /*guarda el id en la variable*/
 
 
@@ -31,28 +30,29 @@ function tabla(datos){
 /*La API Fetch es una funcionalidad con la cual podemos realizar 
 peticiones asíncronas y obtener respuesta a las mismas de una forma sencilla.*/
 
-
-function traerProducto(){
-    fetch('json/items.json') /*toma la direccion del arhivo json a tratar*/
+function traerProd(){
+    fetch('json/tabla.json') /*toma la direccion del arhivo json a tratar*/
     .then(res => res.json()) /*traemos el archivo y lo transformamos a objeto json*/
     .then(datosProd =>{   /*traemos los datos para procesar*/
-        productos(datosProd) /*llamamos a la fc tabla que pondra los datos en la pagina */
+        tablaProd(datosProd) /*llamamos a la fc tabla que pondra los datos en la pagina */
     })
 }
 
-function productos(datosProd){
+function tablaProd (datosProd){
+    let DIVS = document.getElementsByName("DIVS");
     
-let DIVS = document.getElementsByName("DIVS");
-    
-for (i in productos){
+    for (i in productos){
     DIVS[i].innerHTML = 
             `
-            <div class="item">    
+        <div class="item">    
                 <img id="img-item" src="${imgPeque[i]}">
-                <p>   
-                    <h4>${productos[i]}</h4><br>
-                    <td>${precios[i]}</td><br>
-                </p>
-           </div>
+            <p>   
+                <h4>${productos[i]}</h4><br>
+                <td>${precios[i]}</td><br>
+                
+            </p>
+  
+        </div>
         `
-}
+    }
+}  
