@@ -31,7 +31,7 @@ function tabla(datos){
 peticiones asíncronas y obtener respuesta a las mismas de una forma sencilla.*/
 
 function traerProd(){
-    fetch('json/tabla.json') /*toma la direccion del arhivo json a tratar*/
+    fetch('json/items.json') /*toma la direccion del arhivo json a tratar*/
     .then(res => res.json()) /*traemos el archivo y lo transformamos a objeto json*/
     .then(datosProd =>{   /*traemos los datos para procesar*/
         tablaProd(datosProd) /*llamamos a la fc tabla que pondra los datos en la pagina */
