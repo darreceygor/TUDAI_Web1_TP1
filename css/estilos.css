@@ -150,9 +150,7 @@ nav ul li a {
     /*todo a mayusculas*/
 }
 
-#check {
-    display: none;
-}
+
 /*items de menu en bloque */
 
 nav ul {
@@ -183,6 +181,9 @@ nav ul li {
     left: 0;
 }
 
+#check {
+    display: none;
+}
 
 
 
@@ -239,6 +240,12 @@ footer {
     width: 150px;
     height: 150px;
     background-color: white;
+}
+
+p {
+    
+    color: black;
+    
 }
 
 
@@ -357,6 +364,7 @@ caption {
         grid-template-areas: "header header header" "nav nav nav" "sidebar contenido1 contenido2" "sidebar contenido3 contenido4" "sidebar contenido5 contenido6" "sidebar contenido7 contenido8" "footer footer footer";
         grid-gap: 0.2rem;
     }
+
     .nav-lateral {
         display: grid;
         height: 100%;
@@ -364,6 +372,7 @@ caption {
         grid-template-rows: 1fr 1fr 1fr;
         grid-template-areas: "titulocategoria titulocategoria titulocategoria" "categoria1 categoria2 categoria3" "categoria4 categoria5 categoria6";
     }
+
     .container_armado {
         display: grid;
         height: 100vh;
