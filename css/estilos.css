@@ -362,28 +362,7 @@ caption {
             "categoria6";
     }
 
-    .menu,
-    .cancel {
-        display: none;
-    }
-
-
-    nav ul {
-        float: right;
-        margin-right:25px ;
-    }
-    nav ul li {
-        display: inline-block;
-        line-height: 80px; /*especifica la altura mínima de los cuadros de línea dentro del elemento.*/
-        margin: 0 15px;
-    }
-    /* tamaño de letras y mayusc*/
-    nav ul li a {
-        position: relative;
-        font-size: 18px;
-        padding: 5px 0;
-        text-transform: uppercase; /*todo a mayusculas*/
-    }
+    
 }
 
 
