@@ -7,8 +7,7 @@
     <link rel="stylesheet" href="css/estilos.css">
     <title>Administrador</title>
 </head>
-<body onload="traer()">
-
+<body> 
     <div class="container_admin">
         <header>
             
@@ -44,14 +43,17 @@
                         <th>Imagen</th>
                         <th>Marca</th>
                         <th>Modelo</th>
-                        <th>Precio</th>
+                        <th>Característica</th>
                         
                         <th colspan=3 id="alinea">Descripcion</th>
                     </tr>
                 </thead>
-                    <tr>
+                <tbody id="tabla-usuario">
+                    
+                </tbody>
+                    <tr id="inputs">
                         <td><input type="text" value="ID" name="id" id="inputProdId"></td>
-                        <td><input value="IMAGEN" name ="imagen" id="inputProdImg"></td>
+                        <td>IMAGEN</td>
                         <td><input type="text" value="MARCA" name="marca" id="inputProdMarca"></td>
                         <td><input type="text" value="MODELO" name="modelo" id="inputProdModelo"></td>
                         <td><input type="text" value="PRECIO" name="precio" id="inputProdPrecio"></td>
@@ -59,12 +61,13 @@
                         <td><input type="text" value="OBSERVA 2" name="obslinea2" id="inputProdObs2"></td>
                         <td><input type="text" value="OBSERVA 3" name="obslinea3" id="inputProdObs3"></td>
                         <td>
-                            <button id="btnVerItem">
-                                <img src="img/icosuma.jpg"  id="img-item-adm" >
+                            <button>
+                                <img src="img/icosuma.jpg"  id="img-item-adm" onclick="verProd()">
                             </button></td>
                     </tr>
                     <p>
                         <button id="agregarItem">Agregar Item</button>
+                        <button id="agregarItem-3">Agregar 3 Items</button>
                     </p>
                 <div id="verItem">
                     
@@ -76,19 +79,20 @@
                 
         </section>    
         
+        <caption>Listado de Productos</caption>
                 <article id="basededatos">
 
                     <div>
-                        <table>
-                            <thead>
+                        <table id="table">
                             <caption>Listado de Productos</caption>
+                            <thead>
                                 <tr>
                                     <th>#</th>
                                     <th>Imagen</th>
                                     <th>Descripcion</th>
                                     <th id="alinea">Marca</th>
                                     <th>Modelo</th>
-                                    <th>Precio</th>
+                                    <th>Característica</th>
                                     <th colspan=3 id="alinea">Descripcion</th>
                                 </tr>
                             </thead>
