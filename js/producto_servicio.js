@@ -1,3 +1,5 @@
+window.onload = traer();
+
 //TRAE LAS PC ARMADAS DESDE TABLA.JSON => ARMADO.HTML
 function traer(){
     fetch('json/tabla.json') /*toma la direccion del arhivo json a tratar*/
