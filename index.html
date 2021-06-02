@@ -15,10 +15,14 @@
 
     <!-- CODE JQUERY - QUERY PARA MOSTRAR MENU-->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>  
-        
+     
+    <script src="js/producto.js"></script>
+    <script src="js/carrito.js"></script>
+    
+    
     <title>Venta de Articulos de PC</title>
 </head>
-<body>
+<body onload="traerProd()">
 
     <div class="container">
         
@@ -26,7 +30,7 @@
             
         </header>
 
-            <nav class="nav">
+            <nav>
 
               <input type="checkbox" id="check">
                 <label for="check">
@@ -40,8 +44,8 @@
                         <li><a href="index.html">Inicio</a></li>
                         <li><a href="#">Acerca de</a></li>
                         <li><a href="armado.html">Servicios</a></li>
-                        <li><a href="#">Contacto</a></li>
                         <li><a href="#">Historia</a></li>
+                        <li><a href="admin.html">Administrador</a></li>
                     </ul>
 
             </nav>
@@ -56,138 +60,98 @@
                         <li id="categoria4"><h4><a href="#gabinetes" >Gabinetes</a></h4></li>
                         <li id="categoria5"><h4><a href="#teclados" >Teclados</a></h4></li>
                         <li id="categoria6"><h4><a href="#varios" >Varios</a></h4></li>
+                        <br>
+                        <hr>
+                        <br>
+
+                        <h2>Carrito</h2>
+                        <div id="carro">
+                            <div id="carrito"></div>
+                            <div id="carrito2"></div>
+                            <div id="carrito3"></div>
+                            <div id="carrito4"></div>
+                            <div id="carrito5"></div>
+                            <div id="carrito6"></div>
+                            <div id="carrito7"></div>
+                            <div id="carrito8"></div>
+
+                            <br><hr><br>   
+                            <div id="totalCarro"></div>
+                         </div>
+                         <p>
+                             <button id="comprar" >COMPRAR</button>
+                         </p>
+                         
+                    
                     </div>    
                 </ul>   
             </section>
             
-                <article id="contenido1">
-                    <div class ="item">
-                        <img src="img/item1.jpg" alt="imagen 1" id="img-item">
-                        <p>
-                            <h4>Mouse Gamer</h4> <br>
-                            Marca: RAZER Modelo BASILISK <br>
-                            ULTIMATE NEGRO<hr>
-                            Especificaciones: <br>
-                            20000 DPI <br>
-                            Smart Tracking <br>
-                            Motion Sync <hr>
-                        </p>
-                    </div>
-                </article>
+            <article id="contenido1">
+                <div id="div1" name="DIVS"></div>
+                <div id="botones" >
+                    <button id="boton1" class="agregar" name="boton1" >Agregar</button>
+                </div>
+            </article>
+            
+                       
+            <article id="contenido2">
+                <div id="div2" name="DIVS"><div class="item"></div></div>
+                <div id="botones" >
+                    <button id="boton2" class="agregar" name="boton2">Agregar</button>
+                </div>  
+            </article>
 
-                <article id="contenido2">
-                    <div class ="item">
-                        <img src="img/item2.jpg" alt="imagen 2" id="img-item">
-                        <p>
-                            <h4>Mouse Gamer</h4> <br>
-                            Marca: LOGITECH Modelo:G203 Lightsync <br>
-                            Negro <hr>
-                            Especificaciones: <br>
-                            8000 DPI<br>
-                            RGB <br>
-                            Motion Sync <hr>
-                        </p>
-                    </div>
-                </article>
+            <article id="contenido3">
+                <div id="div3" name="DIVS"></div>
+                <div id="botones" >
+                    <button id="boton3" class="agregar" name="boton3">Agregar</button>
+                </div>
+            </article>
 
-                <article id="contenido3">
-                        <div class ="item">
-                            <img src="img/item3.jpg" alt="imagen 3" id="img-item">
-                            <p>
-                                <h4>Combo</h4> <br>
-                                Marca: TEMPEST Modelo: APOCALYPSE <br>
-                                <hr>
-                                Especificaciones: <br>
-                                Teclado Mecanico RGB <br>
-                                Mouse 4000 DPI RGB <br>
-                                Auriculares <hr>
-                            </p>
-                        </div>
-                </article>
+            <article id="contenido4">
+                <div id="div4" name="DIVS"></div>
+                <div id="botones" >
+                    <button id="boton4" class="agregar" name="boton4">Agregar</button>
+                </div>
+            </article>
 
-                <article id="contenido4">
-                        <div class ="item">
-                            <img src="img/item6.jpg" alt="imagen 4" id="img-item">
-                            <p>
-                                <h4>Teclado Mecanico</h4> <br>
-                                Marca:SUIKO Modelo: IVORY <br>
-                                GAMING FULL RGB <hr>
-                                Especificaciones: <br>
-                                Switch Kailh Red <br>
-                                Tecnología anti-ghosting <br>
-                                Teclas programables <hr>
-                            </p>
-                        </div>
-                </article>
+            <article id="contenido5">
+                <div id="div5" name="DIVS"></div>
+                <div id="botones" >
+                    <button id="boton5" class="agregar" name="boton5">Agregar</button>
+                </div>
+            </article>
 
-                <article id="contenido5">
-                    <div class ="item">
-                        <img src="img/item4.jpg" alt="imagen 1" id="img-item">
-                        <p>
-                            <h4>Notebook 14"</h4><br>
-                            Marca: EXO Modelo: Smart C19 <br>
-                            Windows 10 Home Edition <hr>
-                            Especificaciones: <br>
-                            Intel Celeron N3350 <br>
-                            RAM 4GB <br>
-                            SSD 128 GB <hr>
-                        </p>
-                    </div>
-                </article>
+            <article id="contenido6">
+                <div id="div6" name="DIVS"></div>
+                <div id="botones" >
+                    <button id="boton6" class="agregar" name="boton6">Agregar</button>
+                </div>
+            </article>
 
-                <article id="contenido6">
-                    <div class ="item">
-                        <img src="img/item5.png" alt="imagen 2" id="img-item">
-                        <p>
-                            <h4>Notebook 17"</h4> <br>
-                            Marca: MSI Modelo: GF75 THIN <br>
-                            Windows 10 Pro <hr>
-                            Especificaciones: <br>
-                            RAM 16 GB <br>
-                            SSD 512 GB <br>
-                            Placa NVIDIA GTX 1660 Ti 6 GB <hr>
-                        </p>
-                    </div>
-                </article>
+            <article id="contenido7">
+                <div id="div7" name="DIVS"></div>
+                <div id="botones" >
+                    <button id="boton7" class="agregar" name="boton7">Agregar</button>
+                </div>
+            </article>
 
-                <article id="contenido7">
-                    <div class ="item">
-                        <img src="img/item7.png" alt="imagen 3" id="img-item">
-                        <p>
-                            <h4>Tablet 8" </h4><br>
-                            Marca: SAMSUNG Modelo: Galazy TAB A <br>
-                            Negra <hr>
-                            Especificaciones: <br>
-                            RAM 2 GB <br>
-                            Capacidad:32 GB <br>
-                            Dual Camara Wifi <hr>
-                        </p>
-                    </div>
-                </article>
+            <article id="contenido8">
+                <div id="div8" name="DIVS"></div>
+                <div id="botones" >
+                    <button id="boton8" class="agregar" name="boton8">Agregar</button>
+                </div>
+            </article>
 
-                <article id="contenido8">
-                    <div class ="item">
-                        <img src="img/item8.jpg" alt="imagen 4" id="img-item">
-                        <p>
-                            <h4>Tablet 10" </h4><br>
-                            Marca : KANJI Modelo: LANDER <br>
-                            + Auricular Blanco + Funda <hr>
-                            Especificaciones: <br>
-                            RAM 2gb <br>
-                            Capacidad: 32GB
-                            Quad Core <hr>
-                        </p>
-                    </div>
-                </article>
-
-
+            
             <footer>
                 <div id="firma">
                     <span> TUDAI @ 2021 - Emanuel Beorlegui - Diego Arreceygor</span> 
                 </div> 
             </footer>
 
-        <script src="js/main.js"></script>
+
     </div>
 </body>
 </html>
