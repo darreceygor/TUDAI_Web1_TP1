@@ -1,4 +1,4 @@
-window.onload = traer();
+
 
 //TRAE LAS PC ARMADAS DESDE TABLA.JSON => ARMADO.HTML
 function traer(){
