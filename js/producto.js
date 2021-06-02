@@ -1,4 +1,4 @@
-
+window.onload = {
 
 
 let contenido = document.querySelector('#contenido') /*guarda el id en la variable*/
@@ -77,4 +77,5 @@ function tabla(datos){
                 </tr>
         `
     }
+}
 }
