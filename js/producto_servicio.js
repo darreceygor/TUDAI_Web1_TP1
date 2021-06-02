@@ -27,4 +27,4 @@ function tabla(datos){
         `
     }
 }
-© 2021 GitHub, Inc.
+
