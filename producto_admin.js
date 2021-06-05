@@ -3,7 +3,6 @@ document.addEventListener('DOMContentLoaded', function() {
     let tablaAdmin = document.querySelector('#contenido'); /*guarda el id en la variable*/
     let tablaUsuario = document.querySelector('#tabla-usuario')
     let contenidoTabla = [];
-    let ultimoId = 0;
 
     traerDatosPordefecto();
     
@@ -46,57 +45,67 @@ document.addEventListener('DOMContentLoaded', function() {
     peticiones asíncronas y obtener respuesta a las mismas de una forma sencilla.*/
   
     document.getElementById('agregarItem').addEventListener('click', () => {
-        if(verificarInputsVacios()) {
-            contenidoTabla.push(crearObjeto());
+        if(!verificarInputsVacios()) {
+            agregarItemAtabla(crearObjeto());
             cargarTablaUsuario(contenidoTabla);
         }
+    });
+
+    document.getElementById('vaciar-tabla').addEventListener('click', () => {
+            contenidoTabla = [];
+            cargarTablaUsuario(contenidoTabla);
     });
     
     document.getElementById('agregarItem-3').addEventListener('click', () => {
         let objetos = [{
-            "id": ultimoId++,
+            "id": 0,
             "marca": "test",
             "modelo": "test",
             "precio": "test",
             "obslinea1": "test",
             "obslinea2": "test",
             "obslinea3": "test",
-            "url": "../img/item1.jpg"
+            "url": "img/item1.jpg"
         }, {
-            "id": ultimoId++,
+            "id": 0,
             "marca": "test",
             "modelo": "test",
             "precio": "test",
             "obslinea1": "test",
             "obslinea2": "test",
             "obslinea3": "test",
-            "url": "../img/item1.jpg"
+            "url": "img/item1.jpg"
         }, {
-            "id": ultimoId++,
+            "id": 0,
             "marca": "test",
             "modelo": "test",
             "precio": "test",
             "obslinea1": "test",
             "obslinea2": "test",
             "obslinea3": "test",
-            "url": "../img/item1.jpg"
+            "url": "img/item1.jpg"
         }];
         objetos.forEach(obj => {
-            contenidoTabla.push(obj);
+            agregarItemAtabla(obj);
         }); /*llamamos a la fc tabla que pondra los datos en la pagina */
         cargarTablaUsuario(contenidoTabla);
     });
+
+    function agregarItemAtabla(obj) {
+        obj.id= contenidoTabla.length
+        contenidoTabla.push(obj);
+    }
     
     function crearObjeto() {
         let obj = {
-            "id": contenidoTabla.length,
+            "id": 0,
             "marca": document.getElementById("inputProdMarca").value,
             "modelo": document.getElementById("inputProdModelo").value,
             "precio": document.getElementById("inputProdPrecio").value,
             "obslinea1": document.getElementById("inputProdObs1").value,
             "obslinea2": document.getElementById("inputProdObs2").value,
             "obslinea3": document.getElementById("inputProdObs3").value,
-            "url": "../img/item1.jpg"
+            "url": "img/item1.jpg"
         };
         return obj;
     }
@@ -106,10 +115,9 @@ document.addEventListener('DOMContentLoaded', function() {
         let inputVacio = false;
         inputs.forEach(input => {
             if(!inputVacio){
-                inputVacio = input.value != "";
+                inputVacio = (input.value == "") ? true : false;
             }
         }); 
-        console.log(inputVacio)
         return inputVacio;
     }
 });
