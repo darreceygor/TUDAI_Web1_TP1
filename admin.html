@@ -1,122 +1,131 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/estilos.css">
-    <title>Administrador</title>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" contenido="IE=edge">
+  <meta name="viewport" contenido="width=device-width, initial-scale=1.0">
+
+  <link rel="stylesheet" href="css/cards.css">
+
+  <link rel="stylesheet" href="css/index.css">
+
+  <title>Venta de Articulos de PC</title>
 </head>
-<body> 
-    <div class="container_admin">
-        <header>
+
+<body>
+
+  <header>
+    <!--TITULO E IMAGEN DESDE CSS  -->
+  </header>
+
+  <nav>
+    <img src="img/logo.png" alt="LOGO" class="logo">
+    <ul>
+      <li><a href="index.html">Inicio</a></li>
+      <li><a href="#">Acerca de</a></li>
+      <li><a href="armado.html">Servicios</a></li>
+      <li><a href="#">Historia</a></li>
+      <li><a href="admin.html">Administrador</a></li>
+    </ul>
+  </nav>
+
+  <div id="frame">
+
+  <div class="container">
+    <article id="basededatos">
+      <div>
+        <section class="crud">
+          <article>
+
             
-        </header>
+            <form class="crud-form">
 
-        <nav>
+              <div id="form11">
+                <Label for="marca">Marca</Label>
+                <input type="text" id="marca">
 
-            <input type="checkbox" id="check">
-                <label for="check">
-                    <img src="img/menu.png" class="menu" >
-                    <img src="img/cancel.png" class="cancel">
-                </label>
+                <Label for=modelo>Modelo</Label>
+                <input type="text" id="modelo">
 
-                 
-            <img src="img/logo.png" alt="LOGO" class="logo">
-            <ul>
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="#">Acerca de</a></li>
-                <li><a href="armado.html">Servicios</a></li>
-                <li><a href="#">Historia</a></li>
-                <li><a href="admin.html">Administrador</a></li>
-            </ul>
-        </nav>
+                <Label for="precio">Precio</Label>
+                <input type="number" id="precio">
+              </div>
+              
+              <div id="forml2">
 
-        <article id="agregarproducto">
+                <label for="Linea 1">Linea 1 </label>
+                <input type="text" id="obslinea1">
+                <label for="Linea 2">Linea 2 </label>
+                <input type="text" id="obslinea2">
+                <label for="Linea 3">Linea 3</label>
+                <input type="text" id="obslinea3">
 
-            <table>
-                <thead>
-                <caption>Alta - Baja - Modificacion</caption>
-                    <tr>
-                        <th>#</th>
-                        
-                        <th>Imagen</th>
-                        <th>Marca</th>
-                        <th>Modelo</th>
-                        <th>Característica</th>
-                        
-                        <th colspan=3 id="alinea">Descripcion</th>
-                    </tr>
-                </thead>
-                <tbody id="tabla-usuario">
-                    
-                </tbody>
-                    <tr id="inputs">
-                        <td><input type="text" value="ID" name="id" id="inputProdId"></td>
-                        <td>IMAGEN</td>
-                        <td><input type="text" value="MARCA" name="marca" id="inputProdMarca"></td>
-                        <td><input type="text" value="MODELO" name="modelo" id="inputProdModelo"></td>
-                        <td><input type="text" value="PRECIO" name="precio" id="inputProdPrecio"></td>
-                        <td><input type="text" value="OBSERVA 1" name="obslinea1" id="inputProdObs1"></td>
-                        <td><input type="text" value="OBSERVA 2" name="obslinea2" id="inputProdObs2"></td>
-                        <td><input type="text" value="OBSERVA 3" name="obslinea3" id="inputProdObs3"></td>
-                        <td>
-                            <button>
-                                <img src="img/icosuma.jpg"  id="img-item-adm" onclick="verProd()">
-                            </button></td>
-                    </tr>
-                    <p>
-                        <button id="agregarItem">Agregar Item</button>
-                        <button id="agregarItem-3">Agregar 3 Items</button>
-                        <button id="vaciar-tabla">Vacias tabla</button>
-                    </p>
-                <div id="verItem">
-                    
+              </div>
+
+              <div>
+                <button type="submit" class="Guardar">Guardar</button>
+                <input type="hidden" name="id">
+              </div>
+
+              <div id="crud-title-op">
+                
+                  <h3 class="crud-title">Agregar</h3>
                 </div>
-                </table>
-            
-        </article>
 
                 
-        </section>    
-        
-        <caption>Listado de Productos</caption>
-                <article id="basededatos">
+              </div>
 
-                    <div>
-                        <table id="table">
-                            <caption>Listado de Productos</caption>
-                            <thead>
-                                <tr>
-                                    <th>#</th>
-                                    <th>Imagen</th>
-                                    <th>Descripcion</th>
-                                    <th id="alinea">Marca</th>
-                                    <th>Modelo</th>
-                                    <th>Característica</th>
-                                    <th colspan=3 id="alinea">Descripcion</th>
-                                </tr>
-                            </thead>
-                                
-                            <tbody id="contenido">
-                                
-                            </tbody>
-                        
-                       </table>
+            </form>
+          </article>
+          <article>
+            <h2>Listado</h2>
+            <table class="crud-table">
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>Marca</th>
+                  <th>Modelo</th>
+                  <th>Precio</th>
+                  <th>Imagen</th>
+                  <th>Linea 1</th>
+                  <th>Linea 2</th>
+                  <th>Linea 3</th>
+                  <th>Acciones</th>
+                </tr>
+              </thead>
+              <tbody></tbody>
+            </table>
+          </article>
+        </section>
+        <template id="crud-template">
+          <tr>
+            <td class="id"></td>
+            <td class="marca"></td>
+            <td class="modelo"></td>
+            <td class="precio"></td>
+            <td class="url"></td>
+            <td class="obslinea1"></td>
+            <td class="obslinea2"></td>
+            <td class="obslinea3"></td>
+            <td>
+              <button class="edit">Editar</button>
+              <button class="delete">Eliminar</button>
+            </td>
+          </tr>
+        </template>
+      </div>
+    </article>
+  </div>
 
-                    </div>
-
-                </article> 
-
-   
-                    <footer>
-                        <div id="firma">
-                            <span> TUDAI @ 2021 - Emanuel Beorlegui - Diego Arreceygor</span> 
-                        </div> 
-                    </footer>           
-    
+<footer>
+    <!-- IMAGEN DESDE CSS  -->
+    <div id="firma">
+      <span> TUDAI @ 2021 - Emanuel Beorlegui - Diego Arreceygor</span>
     </div>
-
-    <script src="js/producto_admin.js"></script>
+  </footer>
+  <script src="js/producto_admin.js"></script>
+  <!--   <script src="js/partial.js"></script> -->
 </body>
+
 </html>

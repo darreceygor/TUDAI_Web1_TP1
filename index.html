@@ -4,21 +4,9 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" contenido="IE=edge">
     <meta name="viewport" contenido="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="css/estilos.css">
+    <link rel="stylesheet" href="css/index.css">
     
-    <!--GOOGLE FONTS - FUENTE: JOSEFIN SANS-->
-    <link rel="preconnect" href="https://fonts.gstatic.com">
-    <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@200;400&family=Pattaya&display=swap" rel="stylesheet">
-    
-    <!--FONT AWESOME - ICONO-->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
-    <!-- CODE JQUERY - QUERY PARA MOSTRAR MENU-->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>  
-     
-    <script src="js/producto.js"></script>
-    <script src="js/carrito.js"></script>
-    
+    <link rel="stylesheet" href="css/cards.css">
     
     <title>Venta de Articulos de PC</title>
 </head>
@@ -26,20 +14,10 @@
 
     <div class="container">
         
-        <header>
-            
-        </header>
+        <header> <!--TITULO E IMAGEN DESDE CSS  -->  </header>    
 
-            <nav>
-
-              <input type="checkbox" id="check">
-                <label for="check">
-                <img src="img/menu.png" class="menu" >
-                <img src="img/cancel.png" class="cancel">
-                </label>
-
-                 
-                <img src="img/logo.png" alt="LOGO" class="logo">
+        <nav>
+            <img src="img/logo.png" alt="LOGO" class="logo">
                     <ul>
                         <li><a href="index.html">Inicio</a></li>
                         <li><a href="#">Acerca de</a></li>
@@ -47,111 +25,26 @@
                         <li><a href="#">Historia</a></li>
                         <li><a href="admin.html">Administrador</a></li>
                     </ul>
-
-            </nav>
-
+        </nav>
+        
+        <div id="frame">
             <section id="sidebar">
-                <ul>
-                    <div  id="nav-lateral" class="nav-lateral"> 
-                        <h1 id="titulocategoria">Categorias</h1><br>
-                        <li id="categoria1"><h4><a href="#monitores" >Monitores</a></h4></li>
-                        <li id="categoria2"><h4><a href="#parlantes" >Parlantes</a></h4></li>
-                        <li id="categoria3"><h4><a href="#memorias" >Memorias</a></h4></li>
-                        <li id="categoria4"><h4><a href="#gabinetes" >Gabinetes</a></h4></li>
-                        <li id="categoria5"><h4><a href="#teclados" >Teclados</a></h4></li>
-                        <li id="categoria6"><h4><a href="#varios" >Varios</a></h4></li>
-                        <br>
-                        <hr>
-                        <br>
-
-                        <h2>Carrito</h2>
-                        <div id="carro">
-                            <div id="carrito"></div>
-                            <div id="carrito2"></div>
-                            <div id="carrito3"></div>
-                            <div id="carrito4"></div>
-                            <div id="carrito5"></div>
-                            <div id="carrito6"></div>
-                            <div id="carrito7"></div>
-                            <div id="carrito8"></div>
-
-                            <br><hr><br>   
-                            <div id="totalCarro"></div>
-                         </div>
-                         <p>
-                             <button id="comprar" >COMPRAR</button>
-                         </p>
-                         
-                    
-                    </div>    
-                </ul>   
+                
             </section>
-            
-            <article id="contenido1">
-                <div id="div1" name="DIVS"></div>
-                <div id="botones" >
-                    <button id="boton1" class="agregar" name="boton1" >Agregar</button>
-                </div>
-            </article>
-            
-                       
-            <article id="contenido2">
-                <div id="div2" name="DIVS"><div class="item"></div></div>
-                <div id="botones" >
-                    <button id="boton2" class="agregar" name="boton2">Agregar</button>
-                </div>  
-            </article>
 
-            <article id="contenido3">
-                <div id="div3" name="DIVS"></div>
-                <div id="botones" >
-                    <button id="boton3" class="agregar" name="boton3">Agregar</button>
-                </div>
-            </article>
+            <section id="catalogo">
+                
+            </section>
+        </div>
+ 
+        <footer> <!-- IMAGEN DESDE CSS  -->
+            <div id="firma">
+                <span> TUDAI @ 2021 - Emanuel Beorlegui - Diego Arreceygor</span> 
+            </div> 
+        </footer>
 
-            <article id="contenido4">
-                <div id="div4" name="DIVS"></div>
-                <div id="botones" >
-                    <button id="boton4" class="agregar" name="boton4">Agregar</button>
-                </div>
-            </article>
-
-            <article id="contenido5">
-                <div id="div5" name="DIVS"></div>
-                <div id="botones" >
-                    <button id="boton5" class="agregar" name="boton5">Agregar</button>
-                </div>
-            </article>
-
-            <article id="contenido6">
-                <div id="div6" name="DIVS"></div>
-                <div id="botones" >
-                    <button id="boton6" class="agregar" name="boton6">Agregar</button>
-                </div>
-            </article>
-
-            <article id="contenido7">
-                <div id="div7" name="DIVS"></div>
-                <div id="botones" >
-                    <button id="boton7" class="agregar" name="boton7">Agregar</button>
-                </div>
-            </article>
-
-            <article id="contenido8">
-                <div id="div8" name="DIVS"></div>
-                <div id="botones" >
-                    <button id="boton8" class="agregar" name="boton8">Agregar</button>
-                </div>
-            </article>
-
-            
-            <footer>
-                <div id="firma">
-                    <span> TUDAI @ 2021 - Emanuel Beorlegui - Diego Arreceygor</span> 
-                </div> 
-            </footer>
-
-
+        <script src="js/partial.js"></script>
+    
     </div>
 </body>
 </html>
